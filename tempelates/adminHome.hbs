@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Admin Panel</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Cleaning Company Website Template" name="keywords">
+    <meta content="Cleaning Company Website Template" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400&display=swap" rel="stylesheet">
+    
+    <!-- CSS Libraries -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Header Start -->
+        <div class="header home">
+            <div class="container-fluid">
+                <div class="header-top row align-items-center">
+                    <div class="col-lg-3">
+                        <div class="brand">
+                            <a href="/adminHome">
+                                <i><b>C</b>lean<b>C</b>onnect</i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="navbar navbar-expand-lg bg-light navbar-light">
+                            <a href="#" class="navbar-brand">MENU</a>
+                            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                                <div class="navbar-nav ml-auto">
+                                    <a href="/indexmain" class="nav-item nav-link active">Home</a>
+                                    <a href="/Login3" class="nav-item nav-link">Logout</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Header End -->
+        <div class="text-center">
+            <div class="about">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-5 col-md-6"></div>
+                        <div class="about-text">
+                            <a class="btn" href="/vendorlogin">Add Vendor</a>
+                            <a class="btn" href="javascript:void(0);" onclick="showVendors()">Show Vendors</a>
+                            <div id="vendorDetails"></div>
+                            <a class="btn" href="">Pending Orders</a>
+                            <a class="btn" href="">Fulfilled Orders</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer Start -->
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <div class="footer" size>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="footer-link">
+                            <h2>Useful Link</h2>
+                            <a href="/about">About Us</a>
+                            <a href="/services">Our Services</a>
+                            <a href="/contacts">Contact Us</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="footer-link">
+                            <h2>Useful Link</h2>
+                            <a href="">Clients Review</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+    <script>
+        function showVendors() {
+            fetch('/getVendors')
+                .then(response => response.json())
+                .then(data => {
+                    const vendorDetails = document.getElementById('vendorDetails');
+                    vendorDetails.innerHTML = ''; // Clear any previous data
+
+                    if (data.length === 0) {
+                        vendorDetails.innerHTML = '<p>No vendors found.</p>';
+                    } else {
+                        data.forEach(vendor => {
+                            const vendorItem = `
+                                <div class="vendor">
+                                    <p><strong>Name:</strong> ${vendor.fname} ${vendor.lname}</p>
+                                    <p><strong>Business Name:</strong> ${vendor.businessName}</p>
+                                    <p><strong>Email:</strong> ${vendor.email}</p>
+                                    <p><strong>Mobile Number:</strong> ${vendor.mobno}</p>
+                                    <p><strong>Address:</strong> ${vendor.adress}, ${vendor.city}, ${vendor.pincode}</p>
+                                </div>
+                                <hr>
+                            `;
+                            vendorDetails.innerHTML += vendorItem;
+                        });
+                    }
+                })
+                .catch(error => console.error('Error fetching vendors:', error));
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>CleanMe - Cleaning Company Website Template</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Cleaning Company Website Template" name="keywords">
+        <meta content="Cleaning Company Website Template" name="description">
+
+        <!-- Favicon -->
+        <link href="img/favicon.ico" rel="icon">
+
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400&display=swap" rel="stylesheet">
+        
+        <!-- CSS Libraries -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <!-- Header Start -->
+            <div class="header home">
+                <div class="container-fluid">
+                    <div class="hea`der-top row align-items-center">
+                        <div class="col-lg-3">
+                            <div class="brand">
+                                <a href="/index">
+                                    <i><b>C</b>lean<b>C</b>onnect</i>
+                                    <!-- <img src="img/logo.png" alt="Logo"> -->
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-9">
+                            
+                            <div class="navbar navbar-expand-lg bg-light navbar-light">
+                                <a href="#" class="navbar-brand">MENU</a>
+                                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+
+                                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                                    <div class="navbar-nav ml-auto">
+                                        <a href="/indexmain" class="nav-item nav-link active">Home</a>
+                                        <a href="/about" class="nav-item nav-link active">About</a>
+                                        <a href="/services" class="nav-item nav-link">Services</a>
+                                        <a href="/contacts" class="nav-item nav-link">Contacts</a>
+                                        <!-- <a href="Login.html" class="nav-item nav-link">Login</a>   -->                                      
+                                         
+                                         
+                                        <div class="nav-item dropdown">
+                                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Login</a>
+                                            <div class="dropdown-menu">
+                                                <a href="/Login2" class="dropdown-item">Customer Login</a>
+                                                <a href="/Login1" class="dropdown-item">Vendor Login</a>
+                                                <a href="/Login3" class="dropdown-item">Admin Login</a>
+                                                {{!-- <a href="/logout" class="dropdown-item">Logout</a> --}}
+                                            </div>
+                                        </div>
+                                                                           
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- <div class="hero row align-items-center">
+                        <div class="col-md-7">
+                            <h2>Best & Trusted</h2>
+                            <h2><span>Cleaning</span> Service</h2>
+                            <p>Lorem ipsum dolor sit amet elit pretium facilisis ornare</p>
+                            <a class="btn" href="">Explore Now</a>
+                        </div>
+                    </div> -->
+                </div>
+                
+            </div>
+            <!-- Header End -->
+            
+            
+            
+            <!-- About Start -->
+            <div class="about">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-5 col-md-6">
+                            <html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Image Slider | Autoplay With Navigation Visibility</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+    <div class="img-slider">
+      <div class="slide active">
+        <img src="img/image1.jpg" alt="">
+       
+      </div>
+      <div class="slide">
+        <img src="img/image3.jpg" alt="">
+        <div class="info">
+            
+            
+        </div>
+      </div>
+      <div class="slide">
+        <img src="img/image2.jpg" alt="">
+        <div class="info">
+            
+      </div>
+      </div>
+      <div class="navigation">
+        <div class="btn active"></div>
+        <div class="btn"></div>
+        <div class="btn"></div>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+    var slides = document.querySelectorAll('.slide');
+    var btns = document.querySelectorAll('.btn');
+    let currentSlide = 1;
+
+    // Javascript for image slider manual navigation
+    var manualNav = function(manual){
+      slides.forEach((slide) => {
+        slide.classList.remove('active');
+
+        btns.forEach((btn) => {
+          btn.classList.remove('active');
+        });
+      });
+
+      slides[manual].classList.add('active');
+      btns[manual].classList.add('active');
+    }
+
+    btns.forEach((btn, i) => {
+      btn.addEventListener("click", () => {
+        manualNav(i);
+        currentSlide = i;
+      });
+    });
+
+    // Javascript for image slider autoplay navigation
+    var repeat = function(activeClass){
+      let active = document.getElementsByClassName('active');
+      let i = 1;
+
+      var repeater = () => {
+        setTimeout(function(){
+          [...active].forEach((activeSlide) => {
+            activeSlide.classList.remove('active');
+          });
+
+        slides[i].classList.add('active');
+        btns[i].classList.add('active');
+        i++;
+
+        if(slides.length == i){
+          i = 0;
+        }
+        if(i >= slides.length){
+          return;
+        }
+        repeater();
+      }, 10000);
+      }
+      repeater();
+    }
+    repeat();
+    </script>
+
+  </body>
+</html>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- About End -->
+                        
+
+
+            
+            <!-- Feature Start -->
+            <div class="feature">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div class="section-header left">
+                                <p>Why Choose Us</p>
+                                <h2> Your Cleaning Problems, Solved.</h2>
+                                <h3>Professional Cleaning Services at Your Fingertips. Fast, Reliable, and Tailored to Your Needs.</h3>
+                            </div>
+                            <p>Are you struggling to find time for cleaning? A messy home can be overwhelming and stressful, especially with a busy schedule.</p>
+            <p>Imagine coming home after a long day, only to be greeted by a pile of chores. Weekends become a time for catching up on cleaning rather than relaxing. It’s frustrating and tiring.</p>
+            <p>With our professional cleaning services, you can reclaim your time. We handle the cleaning, so you can focus on what truly matters—whether it's spending time with loved ones, pursuing hobbies, or simply relaxing.</p>
+                            {{!-- <a class="btn" href="">Learn More</a> --}}
+                        </div>
+                         
+
+                        <div class="col-md-7">
+                            <div class="row align-items-center feature-item">
+                                <div class="col-5">
+                                    <img src="img/feature-1.jpg" alt="Feature">
+                                </div>
+                                <div class="col-7">
+                                    <h3>✓ Expert cleaners with years of experience</h3>
+                                    <p>
+                                        "Trust your home with our expert cleaners who bring years of experience and care to every visit, treating your space as if it were their own."
+
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row align-items-center feature-item">
+                                <div class="col-5">
+                                    <img src="img/feature-2.jpg" alt="Feature">
+                                </div>
+                                <div class="col-7">
+                                    <h3>✓ Flexible scheduling to fit your busy lifestyle</h3>
+                                    <p>
+                                        "We understand life gets busy. That's why we offer flexible scheduling to make sure your home is spotless, no matter how hectic your day is."
+
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row align-items-center feature-item">
+                                <div class="col-5">
+                                    <img src="img/feature-3.jpg" alt="Feature">
+                                </div>
+                                <div class="col-7">
+                                    <h3>✓ Affordable pricing with no hidden fees</h3>
+                                    <p>
+                                        "Enjoy peace of mind with our affordable pricing and no hidden fees, so you can focus on what matters most while we take care of the rest."
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+            <!-- FAQs Start -->
+            <div class="faqs">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div class="section-header left">
+                                <p>You Might Ask</p>
+                                <h2>Frequently Asked Questions</h2>
+                            </div>
+                            <img src="img/faqs.jpg" alt="Image">
+                        </div>
+                        <div class="col-md-7">
+                            <div id="accordion">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <a class="card-link collapsed" data-toggle="collapse" href="#collapseOne" aria-expanded="true">
+                                            <span>1</span> How do I schedule a service?
+                                        </a>
+                                    </div>
+                                    <div id="collapseOne" class="collapse show" data-parent="#accordion">
+                                        <div class="card-body">
+                                            You can easily book through our website or call our customer service team
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header">
+                                        <a class="card-link" data-toggle="collapse" href="#collapseTwo">
+                                            <span>2</span> What cleaning products do you use?
+                                        </a>
+                                    </div>
+                                    <div id="collapseTwo" class="collapse" data-parent="#accordion">
+                                        <div class="card-body">
+                                            We use eco-friendly and safe products, but you can request specific ones if needed.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header">
+                                        <a class="card-link" data-toggle="collapse" href="#collapseThree">
+                                            <span>3</span> Can I trust the cleaners in my home?
+                                        </a>
+                                    </div>
+                                    <div id="collapseThree" class="collapse" data-parent="#accordion">
+                                        <div class="card-body">
+                                            Absolutely. All our cleaners are vetted, insured, and highly trained.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header">
+                                        <a class="card-link" data-toggle="collapse" href="#collapseFour">
+                                            <span>4</span> What areas do you service?
+                                        </a>
+                                    </div>
+                                    <div id="collapseFour" class="collapse" data-parent="#accordion">
+                                        <div class="card-body">
+                                            We currently serve the Banglore region, but we're expanding soon!
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header">
+                                        <a class="card-link" data-toggle="collapse" href="#collapseFour">
+                                            <span>5</span> What if I'm not satisfied with the service?
+                                        </a>
+                                    </div>
+                                    <div id="collapseFour" class="collapse" data-parent="#accordion">
+                                        <div class="card-body">
+                                            Let us know within 24 hours, and we'll make it right.
+                                        </div>
+                                    </div>
+                                </div> 
+                            </div>
+                            {{!-- <a class="btn" href="">Ask more</a> --}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- FAQs End -->
+            
+
+
+
+            <!-- Testimonial Start -->
+            {{!-- <div class="testimonial">
+                <div class="container">
+                    <div class="section-header">
+                        
+                        <h2>What our Customers say</h2>
+                    </div>
+                    <div class="owl-carousel testimonials-carousel">
+                        <div class="testimonial-item">
+                            <div class="testimonial-img">
+                                
+                            </div>
+                            <div class="testimonial-content">
+                                <blockquote>“Absolutely transformed my home! So easy to book, and the cleaners were fantastic.”</blockquote>
+                            <div class="stars">⭐⭐⭐⭐⭐</div>
+                                
+                            </div>
+                        </div> --}}
+                        <div class="testimonial-item">
+                            <div class="testimonial-img">
+                                
+                            </div>
+                            <div class="testimonial-content">
+                                <blockquote>“I’ve never seen my house this clean. It’s like a weight has been lifted off my shoulders.”</blockquote>
+                                <div class="stars">⭐⭐⭐⭐⭐</div>
+                                
+                            </div>
+                        </div>
+                        <div class="testimonial-item">
+                            <div class="testimonial-img">
+                                
+                            </div>
+                            <div class="testimonial-content">
+                                <blockquote>“Reliable and thorough. I’m a customer for life!”</blockquote>
+                            <div class="stars">⭐⭐⭐⭐⭐</div>
+                                
+                            </div>
+                        </div>
+                        <div class="testimonial-item">
+                            <div class="testimonial-img">
+                               
+                            </div>
+                            <div class="testimonial-content">
+                                <blockquote>“CleanConnect provides the best affordable and quality service”</blockquote>
+                                <div class="stars">⭐⭐⭐⭐⭐</div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Testimonial End -->
+            
+            
+<!-- Footer Start -->
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-contact">
+                    <h2>Contact Us</h2>
+                    <p><i class="fa fa-map-marker-alt"></i>123 Street, City, Country</p>
+                    <p><i class="fa fa-phone-alt"></i>+123 456 7890</p>
+                    <p><i class="fa fa-envelope"></i>info@cleanme.com</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-link">
+                    <h2>Quick Links</h2>
+                    <a href="/indexmain">Home</a>
+                    <a href="/about">About</a>
+                    <a href="/services">Services</a>
+                    <a href="">FAQs</a>
+                    <a href="/contacts">Contact Us</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-social">
+                    <h2>Follow Us</h2>
+                    <a href=""><i class="fab fa-twitter"></i></a>
+                    <a href=""><i class="fab fa-facebook-f"></i></a>
+                    <a href=""><i class="fab fa-instagram"></i></a>
+                    <a href=""><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-newsletter">
+                    <h2>Newsletter</h2>
+                    <form>
+                        <input class="form-control" placeholder="Your Email">
+                        <button class="btn btn-custom">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Footer End -->
+            
+            
+        </div>
+
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="lib/isotope/isotope.pkgd.min.js"></script>
+        <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+    </body>
+</html>

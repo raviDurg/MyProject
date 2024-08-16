@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>CleanMe - Cleaning Company Website Template</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Cleaning Company Website Template" name="keywords">
+        <meta content="Cleaning Company Website Template" name="description">
+
+        <!-- Favicon -->
+        <link href="img/favicon.ico" rel="icon">
+
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400&display=swap" rel="stylesheet">
+        
+        <!-- CSS Libraries -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <!-- Header Start -->
+            <div class="header home">
+                <div class="container-fluid">
+                    <div class="header-top row align-items-center">
+                        <div class="col-lg-3">
+                            <div class="brand">
+                                <a href="/index">
+                                    <i><b>C</b>lean<b>C</b>onnect</i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-9">
+                            <div class="navbar navbar-expand-lg bg-light navbar-light">
+                                <a href="#" class="navbar-brand">MENU</a>
+                                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+
+                                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                                    <div class="navbar-nav ml-auto">
+                                        <a href="/indexmain" class="nav-item nav-link active">Home</a>
+                                        <a href="/services" class="nav-item nav-link">Services</a>
+                                        <a href="/contacts" class="nav-item nav-link">Contact</a>
+                                        <a href="/about" class="nav-item nav-link">About US</a>
+                                        <div class="nav-item dropdown">
+                                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Login</a>
+                                            <div class="dropdown-menu">
+                                                <a href="/Login2" class="dropdown-item">Customer Login</a>
+                                                <a href="/Login1" class="dropdown-item">Vendor Login</a>
+                                                <a href="/Login3" class="dropdown-item">Admin Login</a>
+                                                <a href="/logout" class="dropdown-item">Logout</a>
+                                            </div>
+                                        </div>                                   
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Header End -->
+
+            <!-- Service Start -->
+            <div class="service">
+                <div class="container">
+                    <h1 style="color: green;">The Vendor has been booked</h1>
+                    <p>Here are your details</p>
+                    <p>Vendor name: Ted</p>
+                    <p>Time slot: 11:00 am to 01:00 pm</p>
+                    <p>Date: 13/08/2024</p>
+                    <p>Payment Status: done</p>
+                    <button id="downloadBtn">Download Receipt</button>
+                    <h4>The helper will arrive soon, thank you for your patience</h4>
+                </div>
+            </div>
+            <!-- Service End -->
+           
+            <!-- Footer Start -->
+            <div class="footer" size>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 col-lg-3">
+                            <div class="footer-link">
+                                <h2>Useful Link</h2>
+                                <a href="/about">About Us</a>
+                                <a href="/services">Our Services</a>
+                                <a href="/contacts">Contact Us</a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <div class="footer-link">
+                                <h2>Useful Link</h2>
+                                <a href="/clientsreview">Clients Review</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer End -->
+        </div>
+
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="lib/isotope/isotope.pkgd.min.js"></script>
+        <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+        <script src="src/bvend.js"></script>
+
+        <!-- Download functionality -->
+        <script>
+            document.getElementById("downloadBtn").addEventListener("click", function () {
+                // Get the entire HTML content of the page
+                var pageContent = document.documentElement.outerHTML;
+                
+                // Create a Blob object from the HTML content
+                var blob = new Blob([pageContent], { type: "text/html" });
+                
+                // Create a link element
+                var link = document.createElement("a");
+                
+                // Set the download attribute with a filename
+                link.download = "receipt.html";
+                
+                // Create a URL for the Blob and set it as the href attribute
+                link.href = URL.createObjectURL(blob);
+                
+                // Append the link to the body
+                document.body.appendChild(link);
+                
+                // Programmatically click the link to trigger the download
+                link.click();
+                
+                // Remove the link from the document
+                document.body.removeChild(link);
+            });
+        </script>
+    </body>
+</html>

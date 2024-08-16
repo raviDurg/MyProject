@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>CleanConnect - Cleaning Company Website Template</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Cleaning Company Website Template" name="keywords">
+        <meta content="Cleaning Company Website Template" name="description">
+
+        <!-- Favicon -->
+        <link href="img/favicon.ico" rel="icon">
+
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400&display=swap" rel="stylesheet">
+        
+        <!-- CSS Libraries -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="/css/style.css" rel="stylesheet">
+        
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <!-- Header Start -->
+            <div class="header home">
+                <div class="container-fluid">
+                    <div class="header-top row align-items-center">
+                        <div class="col-lg-3">
+                            <div class="brand">
+                                <a href="/index">
+                                    <i><b>C</b>lean<b>C</b>onnect</i>
+                                    <!-- <img src="img/logo.png" alt="Logo"> -->
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-9">
+                        
+                            <div class="navbar navbar-expand-lg bg-light navbar-light">
+                                <a href="#" class="navbar-brand">MENU</a>
+                                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+
+                                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                                    <div class="navbar-nav ml-auto">
+                                        <a href="/index" class="nav-item nav-link active">Home</a>
+                                        <a href="/services" class="nav-item nav-link">Services</a>
+                                        <!-- <a href="Login.html" class="nav-item nav-link">Login</a>   -->                                      
+                                        <a href="/contacts" class="nav-item nav-link">Order</a>
+                                        <a href="/profile" class="nav-item nav-link">Profile</a>   
+                                        <div class="nav-item dropdown">
+                                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Login</a>
+                                            <div class="dropdown-menu">
+                                                <a href="/Login2" class="dropdown-item">Customer Login</a>
+                                                <a href="/Login1" class="dropdown-item">Vendor Login</a>
+                                                <a href="/Login3" class="dropdown-item">Admin Login</a>
+                                                <a href="/logout" class="dropdown-item">Logout</a>
+                                            </div>
+                                        </div>                                   
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    
+                </div>
+                
+            </div>
+            <!-- Header End -->
+        
+
+            <!-- Service Start -->
+            <div class="service">
+                <div class="container">
+                    <div class="section-header">
+                        <p><b>Our Services</b></p>
+                        <h2>Provide Services Worldwide</h2>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6">
+                            <div class="service-item">
+                                <img src="/img/service-1.jpg" alt="Service">
+                                <h3>Bedroom Cleaning</h3>
+                                <p>₹ 1000 only</p>
+                                <p>
+                                    <!-- Our bedroom cleaning service ensures a spotless, serene space by dusting, vacuuming, and organizing, creating a peaceful retreat for your relaxation. -->
+                                </p>
+                                <button class="add-to-cart-btn" id="add-product-2" onclick="addToCart('Bedroom Cleaning', 1000, this)">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="service-item">
+                                <img src="/img/service-2.jpg" alt="Service">
+                                <h3>Glass Cleaning</h3>
+                                <p>₹ 750 only</p>
+                                <p>
+                                    <!-- Our glass cleaning service leaves your windows and mirrors crystal clear, free from streaks, smudges, and dirt, brightening up your living spaces. -->
+                                </p>
+                                <button class="add-to-cart-btn" id="add-product-2" onclick="addToCart('Glass Cleaning', 750, this)">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="service-item">
+                                <img src="/img/service-3.jpg" alt="Service">
+                                <h3>Room Cleaning</h3>
+                                <p>₹ 800 only</p>
+                                <p>
+                                    <!-- We provide thorough room cleaning, addressing every corner with care, from dusting and vacuuming to tidying and sanitizing, ensuring a clean and inviting environment. -->
+                                </p>
+                                <button class="add-to-cart-btn" id="add-product-2" onclick="addToCart('Room Cleaning', 800, this)">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="service-item">
+                                <img src="/img/service-4.jpg" alt="Service">
+                                <h3>Bathroom Cleaning</h3>
+                                <p>₹ 1200 only</p>
+                                <p>
+                                    <!-- Our bathroom cleaning service tackles grime, soap scum, and stains, leaving your bathroom sparkling clean, fresh, and hygienic. -->
+                                </p>
+                                <button class="add-to-cart-btn" id="add-product-2" onclick="addToCart('Bathroom Cleaning', 1200, this)">Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <h2><b>Your Cart</b></h2>
+    <div class="container">
+        <ul id="cart-items"></ul>
+        <p id="total-amount">Total: ₹0.00</p>
+        <button class="checkout-btn" onclick="redirectToPayment()">Checkout</button>
+    </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <!-- Service End -->
+
+
+
+            <!-- Footer Start -->
+            <div class="footer" size>
+                <div class="container">
+                    <div class="row">
+                        
+                        <div class="col-md-6 col-lg-3">
+                            <div class="footer-link">
+                                <h2>Useful Link</h2>
+                                <a href="/about">About Us</a>
+                               
+                                <a href="/services">Our Services</a>
+                                
+                                <a href="/contacts">Contact Us</a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <div class="footer-link">
+                                <h2>Useful Link</h2>
+                               
+                                <a href="/clientsreview">Clients Review</a>
+                               
+                                <!-- <a href="">Customer Support</a> -->
+                              
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+            
+            </div>
+            <!-- Footer End -->
+            
+            
+        </div>
+
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="lib/isotope/isotope.pkgd.min.js"></script>
+        <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+        <!-- Template Javascript -->
+        <script>
+let totalAmount = 0;
+
+let cart = [];
+
+function addToCart(productName, productPrice, button) {
+    if (cart.some(item => item.name === productName)) {
+        alert(`${productName} cannot be repeated. It is already in your cart.`);
+        return;
+    }
+
+    const cartItems = document.getElementById('cart-items');
+
+    const listItem = document.createElement('li');
+    
+    listItem.innerHTML = `${productName} - ₹${productPrice.toFixed(2)} <button class="remove-btn" onclick="removeFromCart('${productName}', ${productPrice}, this)">Remove</button>`;
+
+    cartItems.appendChild(listItem);
+
+    totalAmount += productPrice;
+
+    document.getElementById('total-amount').textContent = `Total: ₹${totalAmount.toFixed(2)}`;
+
+    button.disabled = true;
+
+    cart.push({ name: productName, button: button });
+}
+
+
+function removeFromCart(productName, productPrice, removeButton) {
+    removeButton.parentElement.remove();
+
+    totalAmount -= productPrice;
+
+    document.getElementById('total-amount').textContent = `Total: $${totalAmount.toFixed(2)}`;
+
+    const itemIndex = cart.findIndex(item => item.name === productName);
+    if (itemIndex > -1) {
+        cart[itemIndex].button.disabled = false; // Re-enable the button
+        cart.splice(itemIndex, 1); // Remove the item from the cart array
+    }
+}
+
+function getTotalAmountFromURL() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const totalAmount = urlParams.get('total');
+    return totalAmount ? parseFloat(totalAmount) : 0;
+}
+
+function updateBillingPageTotal() {
+    const totalAmount = getTotalAmountFromURL();
+    
+    document.getElementById('subtotal').textContent = `₹${totalAmount.toFixed(2)}`;
+    document.getElementById('total-amount').textContent = `₹${(totalAmount + 20).toFixed(2)}`; // Assuming ₹20 is the tax or additional fee
+}
+
+if (window.location.pathname.endsWith('/billing')) {
+    updateBillingPageTotal();
+}   
+
+function redirectToPayment() {
+    window.location.href = `/billing?total=${totalAmount.toFixed(2)}`;
+}
+        </script>
+    </body>
+</html>
